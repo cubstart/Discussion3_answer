@@ -1,14 +1,13 @@
 import SwiftUI
 
-// Define the Contact model
+
 struct Contact: Identifiable {
-    let id = UUID() // Unique identifier for each contact
+    let id = UUID()
     var name: String
     var phoneNumber: String
     var isFavorite: Bool
 }
 
-// Define the ContactRow view
 struct ContactRow: View {
     var contact: Contact
     
@@ -31,7 +30,6 @@ struct ContactRow: View {
     }
 }
 
-// Define the ContentView
 struct FriendView: View {
     @State private var contacts = [
         Contact(name: "John Doe", phoneNumber: "123-456-7890", isFavorite: true),
@@ -70,7 +68,6 @@ struct FriendView: View {
         }
     }
     
-    // Function to add a new contact
     private func addContact() {
         
         let newContact = Contact(
@@ -80,14 +77,12 @@ struct FriendView: View {
         )
         contacts.append(newContact)
         
-        // Reset the input fields
         newContactName = ""
         newContactPhoneNumber = ""
         newContactIsFavorite = false
     }
 }
 
-// Define the AddContactView
 struct AddContactView: View {
     @Binding var isPresented: Bool
     @Binding var name: String
@@ -124,7 +119,6 @@ struct AddContactView: View {
     }
 }
 
-// Preview
 #Preview {
     FriendView()
 }
