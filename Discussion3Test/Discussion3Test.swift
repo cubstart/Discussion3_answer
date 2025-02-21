@@ -43,7 +43,7 @@ struct Discussion3Test {
         
         let result = XSKI(programs: inputProgram)
         
-        #expect(result == (500 * 500) + (100000 * 1000000))
+        #expect(result == (500 * 500) + (100000 * 100000))
         
         #expect(inputProgram.allSatisfy ({  !$0.important }))
     }
